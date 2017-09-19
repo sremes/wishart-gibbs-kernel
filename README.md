@@ -34,7 +34,7 @@ See `run_exp.m` for a full code to run this example, that also runs a comparison
 
 ## LCGP
 
-For LCGP we provide a function 'lcgp.m' that initializes the Wishart-Gibbs kernel used for the latent variables, as well as all the variational distributions, and runs the variational inference algorithm.
+For LCGP we provide a function `lcgp.m` that initializes the Wishart-Gibbs kernel used for the latent variables, as well as all the variational distributions, and runs the variational inference algorithm.
 
 ```matlab
 model = lcgp(T, x, y, ell_u, ell_b, ell_z, opts);
