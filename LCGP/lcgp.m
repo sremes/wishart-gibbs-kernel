@@ -61,7 +61,8 @@ model.Ku_inv = model.Ku \ eye(size(model.Ku));
 model.ell_b = ell_b;
 model.sigma_b = opts.sigma_b;
 model.KB = gausskernel(model.T,model.T,ell_b,model.sigma_b,.001);
-model.KB_inv = inv(model.KB);
+model.KB_inv = kron(inv(model.KB),eye(model.Q));
+model.KB = kron(model.KB, eye(model.Q));
 
 % init variables
 model.B = kron(eye(model.N), model.sigma_b*randn(model.M,model.Q));
